@@ -85,6 +85,9 @@ public class FileService implements IFileService {
         		if(out != null){
         			out.close();
         		}
+        		if(is != null){
+        			is.close();
+        		}
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
