@@ -31,6 +31,21 @@
         </jaxrs:languageMappings>
     </jaxrs:server>
     
+    <jaxrs:server id="restServiceTime" address="/times">
+	    <jaxrs:providers>
+	      <ref bean="jacksonProvider" />
+	    </jaxrs:providers>
+        <jaxrs:serviceBeans>
+            <ref bean="timeService"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:languageMappings>
+            <entry key="en" value="en-gb" />
+        </jaxrs:languageMappings>
+    </jaxrs:server>
+    
 	<jaxrs:server id="restServiceServer" address="/servers">
 	    <jaxrs:providers>
 	      <ref bean="jacksonProvider" />
