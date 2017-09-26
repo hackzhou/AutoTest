@@ -15,7 +15,7 @@ public class TimeService implements ITimeService {
 	@Override
 	public SimpleJsonResult getDateTime() {
 		try {
-			return new SimpleJsonResult(true, String.valueOf(DateUtil.getLongSystemTime()));
+			return new SimpleJsonResult(true, (Object) DateUtil.getLongSystemTime());
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error(e.getMessage());
@@ -30,7 +30,7 @@ public class TimeService implements ITimeService {
 		}
 		try {
 			DateUtil.setSystemDateTime(new Date(Long.parseLong(time)));
-			return new SimpleJsonResult(true);
+			return new SimpleJsonResult(true, (Object) time);
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error(e.getMessage());

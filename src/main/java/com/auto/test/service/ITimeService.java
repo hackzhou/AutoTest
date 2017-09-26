@@ -7,7 +7,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 import com.auto.test.bean.SimpleJsonResult;
 
-@Path("/datetime")
+@Path("/time")
 public interface ITimeService {
 	
 	@GET

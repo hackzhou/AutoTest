@@ -24,6 +24,11 @@ public class SimpleJsonResult {
 		this.msg = msg;
 		this.name = name;
 	}
+	public SimpleJsonResult(boolean success, Object data) {
+		super();
+		this.success = success;
+		this.data = data;
+	}
 	public SimpleJsonResult(boolean success, Object data, String name) {
 		super();
 		this.success = success;
