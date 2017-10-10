@@ -29,7 +29,7 @@ public class TimeService implements ITimeService {
 			return new SimpleJsonResult(false, "设置时间不能为空！");
 		}
 		try {
-			DateUtil.setSystemDateTime(new Date(Long.parseLong(time)));
+			DateUtil.setSystemDateTime("0".equals(time) ? null : new Date(Long.parseLong(time)));
 			return new SimpleJsonResult(true, (Object) time);
 		} catch (Exception e) {
 			e.printStackTrace();
