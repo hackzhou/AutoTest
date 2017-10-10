@@ -25,7 +25,7 @@ public class TimeService implements ITimeService {
 
 	@Override
 	public SimpleJsonResult setDateTime(String time) {
-		if(time == null || !time.isEmpty()){
+		if(time == null || time.isEmpty()){
 			return new SimpleJsonResult(false, "设置时间不能为空！");
 		}
 		try {
